@@ -1,0 +1,12 @@
+<p>Login Form</p>
+<form [formGroup]="form" (submit)="checkLogin()">
+    <label for=username>Username</label>
+    <input formControlName="username" id="username" #username />
+    <!-- <div *ngIf="username.touched && username.hasError('required')">Username is required</div> -->
+    <br />
+    <label for=password>Password</label>
+    <input formControlName="password" id="password" #password type="password" />
+    <!-- <div *ngIf="password.touched && password.hasError('required')">Password is required</div> -->
+    <br />
+    <button type="submit" [disabled]="!form.valid">Login</button>
+</form>
