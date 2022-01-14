@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   checkLogin() {
-    let signinUrl = environment.API_URL + 'signin';
+    let signinUrl = environment.API_URL + 'auth/signin';
     let formData = this.form.value;
     console.log('formdata', formData);
     this.http.post(signinUrl,{username: formData.username, password: formData.password}).subscribe((result)=>{
